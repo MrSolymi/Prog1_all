@@ -1,6 +1,9 @@
 #include "../forras/Simple_window.h"
 #include "../forras/Graph.h"
 
+#include <iostream>
+#include <sstream>
+
 int main()
 {
     int xmax = 600;

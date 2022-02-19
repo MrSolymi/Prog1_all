@@ -1,5 +1,6 @@
 #include "../forras/Simple_window.h"
 #include "../forras/Graph.h"
+#
 
 int main()
 {
@@ -89,9 +90,9 @@ int main()
     win.attach(m);
 
     ostringstream oss;
-    oss << "screen size: " << x_max() << "*" << y_max() << "; window size: " << win.x_max() << "*" << win.y_max();
+    oss << "screen size: " << x_max() << "*" << y_max()
+    << "; window size: " << win.x_max() << "*" << win.y_max();
     Text sizes {Point{100,20},oss.str()};
-    win.attach(sizes);
 
     Image cal {Point{225,225},"ch12/200x200.gif"}; //200x200 gif
     cal.set_mask(Point{40,40},200,150); // display center part of image

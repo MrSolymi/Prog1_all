@@ -35,7 +35,6 @@ int main()
         vr[vr.size()-1].set_color(Color::invisible);
         win.attach(vr[vr.size()-1]);
     }
-
     win.attach(grid);
     //4.
     Image kutyus {Point{300,0},"ch13/200x200kep.jpeg"};

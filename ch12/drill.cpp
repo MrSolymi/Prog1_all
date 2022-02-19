@@ -1,6 +1,5 @@
 #include "../forras/Simple_window.h"
 #include "../forras/Graph.h"
-#
 
 int main()
 {

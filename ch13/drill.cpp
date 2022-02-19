@@ -11,7 +11,7 @@ int main()
 
     int xgrid = 100;
     int ygrid = 100;
-
+    
     Lines grid;
 
     //2.

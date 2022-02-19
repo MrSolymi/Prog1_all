@@ -13,7 +13,7 @@ int main()
     int ygrid = 100;
     
     Lines grid;
-
+    
     //2.
     for (int x = xgrid; x <= 800; x += xgrid)
     {

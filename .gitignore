@@ -30,5 +30,3 @@
 *.exe
 *.out
 *.app
-
-git config --global core.excludesfile ~/.gitignore_global

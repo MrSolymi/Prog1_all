@@ -24,7 +24,6 @@ int main()
         grid.add(Point{0,y}, Point{xmax, y});
     }
 
-
     //3.
     Vector_ref<Rectangle> vr;
 

@@ -60,6 +60,7 @@ int main()
     win.set_label("Canvas #7");
     win.wait_for_button();
     //Text
+    
     Text t {Point{150,150}, "Hello, graphical world!"};
     win.attach(t);
     win.set_label("Canvas #8");

@@ -43,6 +43,24 @@ int main()
     Image kutyus2 {Point{0,400},"ch13/200x200kep.jpeg"};
     win.attach(kutyus2);
     
-
     win.wait_for_button();
+
+    //5.
+
+    while (true)
+    {
+        int v1;
+        int v2;
+        do
+        {
+            srand (time(NULL));
+            v1 = rand() % 8;
+            v2 = rand() % 8;
+        } while (v1 == v2);
+        Point randPoint {v1*100, v2*100};
+        Image superman {randPoint, "ch13/100x100.jpeg"};
+        win.attach(superman);
+        win.wait_for_button(); //terminalba ctrl + c a kilépéshez
+    }
+    
 }

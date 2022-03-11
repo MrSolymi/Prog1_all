@@ -34,7 +34,7 @@ int main()
     win.wait_for_button();
     //Graphing a function (függvényábrázolás)
     sine.set_color(Color::blue); // we changed our mind about sine’s color
-    Polygon poly; // a polygon; a Polygon is a kind of Shape
+    Graph_lib::Polygon poly; // a polygon; a Polygon is a kind of Shape
     poly.add(Point{300, 200}); // three points make a triangle
     poly.add(Point{350, 100});
     poly.add(Point{400, 200});
@@ -44,7 +44,7 @@ int main()
     win.set_label("Canvas #5");
     win.wait_for_button();
     //Polygons
-    Rectangle r {Point{200,200}, 120, 50}; // top left corner, width, height
+    Graph_lib::Rectangle r {Point{200,200}, 120, 50}; // top left corner, width, height
     win.attach(r);
     win.set_label("Canvas #6");
     win.wait_for_button();
@@ -89,7 +89,7 @@ int main()
     Point center = Point{100,200};
     Circle c {center,50};
     win.attach(c);
-    Ellipse e {center, 75,25};
+    Graph_lib::Ellipse e {center, 75,25};
     e.set_color(Color::red);
     win.attach(e);
     Mark m {center,'o'};

@@ -25,11 +25,11 @@ int main()
     }
     
     //3.
-    Vector_ref<Rectangle> vr;
+    Vector_ref<Graph_lib::Rectangle> vr;
 
     for (int i = 0; i < 8; i++)
     {
-        vr.push_back(new Rectangle{Point{i*100,i*100}, Point{(i+1)*100,(i+1)*100}});
+        vr.push_back(new Graph_lib::Rectangle{Point{i*100,i*100}, Point{(i+1)*100,(i+1)*100}});
         vr[vr.size()-1].set_fill_color(Color::red);
         vr[vr.size()-1].set_color(Color::invisible);
         win.attach(vr[vr.size()-1]);

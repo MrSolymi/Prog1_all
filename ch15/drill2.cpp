@@ -1,4 +1,4 @@
-#include "gui/std_lib_facilities.h"
+#include "../forras/std_lib_facilities.h"
 
 struct Person
 {
@@ -6,8 +6,10 @@ struct Person
     int age;
 
     //default constructor
+    Person(){};
 
-    Person(string n, int a){
+    Person(string n, int a)
+    {
         name = n;
         age = a;
     }

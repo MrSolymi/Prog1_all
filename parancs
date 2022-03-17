@@ -5,3 +5,5 @@ g++ main.cpp Graph.cpp Window.cpp GUI.cpp Simple_window.cpp -o main `fltk-config
 g++ ch12/drill.cpp forras/Graph.cpp forras/Window.cpp forras/GUI.cpp forras/Simple_window.cpp -o drill `fltk-config --ldflags --use-images` -std=c++11
 
 ./compile.bat ch12/drill.cpp ch12/drill.exe
+
+g++ drill2.cpp -o drill2

@@ -16,7 +16,8 @@ int main()
     
     list<int> listNumbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-    int* arrayNumbers2 = arrayNumbers;
+    int arrayNumbers2[sizeof(arrayNumbers)/sizeof(*arrayNumbers)];
+    copy(begin(arrayNumbers), end(arrayNumbers), begin(arrayNumbers2));
     vector<int> vectorNumbers2 = vectorNumbers;
     list<int> listNumbers2 = listNumbers;
 
@@ -28,12 +29,12 @@ int main()
     increment(listNumbers, 5);
 
 
-    for (int& i : arrayNumbers) cout << i << " ";
+    for (int& i : arrayNumbers2) cout << i << " ";
     cout << endl;
-    for (int& i : vectorNumbers) cout << i << " ";
+    for (int& i : vectorNumbers2) cout << i << " ";
     cout << endl;
-    for (int& i : listNumbers) cout << i << " ";
+    for (int& i : listNumbers2) cout << i << " ";
     cout << endl;
     
-    
+    return 0;
 }

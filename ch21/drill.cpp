@@ -1,5 +1,10 @@
 #include "../forras/std_lib_facilities.h"
 
+
+
+
+
+
 //f1
 struct Item{
     string name;
@@ -71,10 +76,13 @@ int main(){
         throw runtime_error("Could not read file: " + iname);
     }
     vector<Item> vi;
+    vector<Item> vedes;
     for (Item d; ifs >> d;) {
         vi.push_back(d);
+        vedes.push_back(d);
     }
 
+    print(vedes);
     //f8
     list<Item> li (vi.size());
     copy(vi.begin(), vi.end(), li.begin());
@@ -83,66 +91,73 @@ int main(){
     sort(vi.begin(), vi.end(), sort_by_name());
     cout << "Items sorted by name: " << endl;
     print(vi);
+    
+    //Védés-----
+    sort(vedes.begin(), vedes.end(), [] (const Item& a, const Item& b)
+                    { return a.name < b.name; });
+    cout << "Items sorted by name using lambda expression: " << endl;
+    print(vedes);
+    //Védés-----
 
     //f3
     sort(vi.begin(), vi.end(), sort_by_id());
-    cout << "Items sorted by id: " << endl;
-    print(vi);
+    //cout << "Items sorted by id: " << endl;
+    //print(vi);
 
     //f4
     sort(vi.begin(), vi.end(), sort_by_value_decreasing());
-    cout << "Items sorted by value in descending order: " << endl;
-    print(vi);
+    //cout << "Items sorted by value in descending order: " << endl;
+    //print(vi);
 
     //f5
     vi.push_back(Item{ "horse shoe", 99, 12.34 });
     vi.push_back(Item{ "Canon S400", 9988, 499.95 });
-    cout << "Items: " << endl;
-    print(vi);
+    //cout << "Items: " << endl;
+    //print(vi);
 
     //f6
     vi.erase(find_if(vi.begin(), vi.end(), find_name("computer")));
     vi.erase(find_if(vi.begin(), vi.end(), find_name("tv")));
-    cout << "Items deleted by name: " << endl;
-    print(vi);
+    //cout << "Items deleted by name: " << endl;
+    //print(vi);
 
     //f7
     vi.erase(find_if(vi.begin(), vi.end(), find_iid(44)));
     vi.erase(find_if(vi.begin(), vi.end(), find_iid(37)));
-    cout << "Items deleted by id: " << endl;
-    print(vi);
+    //cout << "Items deleted by id: " << endl;
+    //print(vi);
 
     //f8
 
-    cout << "List items: " << endl;
-    print(li);
+    //cout << "List items: " << endl;
+    //print(li);
 
     li.sort(sort_by_name());
-    cout << "List items sorted by name: " << endl;
-    print(li);
+    //cout << "List items sorted by name: " << endl;
+    //print(li);
 
     li.sort(sort_by_id());
-    cout << "List items sorted by id: " << endl;
-    print(li);
+    //cout << "List items sorted by id: " << endl;
+    //print(li);
 
     li.sort(sort_by_value_decreasing());
-    cout << "List items sorted by value descending: " << endl;
-    print(li);
+    //cout << "List items sorted by value descending: " << endl;
+    //print(li);
 
     li.push_back(Item{"horse shoe", 99, 12.34});
     li.push_back(Item{"Canon S400", 9988, 499.95});
-    cout << "Items: " << endl;
-    print(li);
+    //cout << "Items: " << endl;
+    //print(li);
 
     li.erase(find_if(li.begin(), li.end(), find_name("computer")));
     li.erase(find_if(li.begin(), li.end(), find_name("tv")));
-    cout << "Items deleted by name: " << endl;
-    print(li);
+    //cout << "Items deleted by name: " << endl;
+    //print(li);
 
     li.erase(find_if(li.begin(), li.end(), find_iid(44)));
     li.erase(find_if(li.begin(), li.end(), find_iid(37)));
-    cout << "Items deleted by id: " << endl;
-    print(li);
+    //cout << "Items deleted by id: " << endl;
+    //print(li);
 
     return 0;
 }

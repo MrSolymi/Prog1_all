@@ -57,7 +57,7 @@ int main(){
 	cin.clear();
     cin.ignore();
 	cout << endl;
-	cout << "Enter 10 floats: ";
+	cout << "Enter 10 floats: " << endl;
 	Matrix<double> m2(10);
 	double d2;
 	for (int i = 0; i < m2.size(); ++i)
@@ -89,9 +89,9 @@ int main(){
 
 	//f7
 	Matrix<complex<double>> mc(10);
-	cout << "Enter 10 complex numbers (Re, Im): ";
+	cout << "Enter 10 complex numbers (Re, Im): " << endl;
 	complex<double> comp;
-	for (int i = 0; i < 10; ++i)
+	for (int i = 0; i < mc.size(); ++i)
 	{
 		cin >> comp;
 		if (!cin) throw runtime_error("Problem reading complex number!");
@@ -122,4 +122,6 @@ int main(){
 		}
 		cout << endl;
 	}
+
+	return 0;
 }
